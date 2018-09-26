@@ -17,11 +17,6 @@ int main()
 			printf("+");
 		}
 		printf("%d, ",i);
-		
-		//printf("%d\n",i);
 	}
-	/*for(j=2;j<=n;j=j+2){
-		printf("%d, ",j);
-	}*/
 	return 0;
 }
