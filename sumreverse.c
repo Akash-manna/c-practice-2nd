@@ -8,17 +8,26 @@
 #include<stdio.h>
 int main()
 {
-	int num,r, buffer, sum=0, rev=0;
+	int num, i, r, buffer, sum=0, rev=0;
 	unsigned int diffsum, diffrev;
 	printf("Enter the Original Number: ");
 	scanf("%d",&num);
 	buffer=num;
-	while(buffer>0){
+	//Using While loop
+	/*while(buffer>0){
 		r = buffer%10;
 		rev = 10*rev+r;
 		buffer = buffer/10;
 		sum = sum+r;
-	}
+	}*/
+	//Using for loop
+	for(i=buffer;i>0; )
+    {
+        r=i%10;
+        rev=rev*10+r;
+        i=i/10;
+		sum = sum+r;
+    }
 	printf("The Sum of Digits of %d is %d\n",num,sum);
 	printf("The Reverse of %d is %d\n",num,rev);
 	diffsum = num - sum;

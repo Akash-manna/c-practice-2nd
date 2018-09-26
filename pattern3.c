@@ -19,11 +19,15 @@ int main()
             printf("  ");
         }
 
-        while(k != 2*i-1)
+        /*while(k != 2*i-1)
         {
             printf("* ");
             ++k;
-        }
+        }*/
+		for(k=0;k<(2*i-1);){
+			printf("* ");
+            ++k;
+		}
 
         printf("\n");
     }
