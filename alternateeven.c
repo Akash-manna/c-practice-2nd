@@ -8,7 +8,7 @@ int main()
 	int i,j,n;
 	printf("Enter the Limit N: ");
 	scanf("%d",&n);
-	for(i=2;i<=n;i=i+2)
+	for(i=2;i<=n;i+=2)
 	{
 		if(i%4==0){
 			printf("-");
