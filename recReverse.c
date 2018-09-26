@@ -1,5 +1,6 @@
 //Q.24>Write a program using recurssive method to reverse any given number
 #include<stdio.h>
+//This is called a global variable. i.e. - It can be used in any function without declaring again.
 int sum=0;
 int reverse(int n)
 {

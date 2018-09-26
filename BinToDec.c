@@ -13,7 +13,7 @@ int convert(long n)
 	}
 	return s;
 }
-main()
+void main()
 {
 	long n;
 	int d;

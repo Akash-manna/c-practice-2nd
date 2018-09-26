@@ -1,28 +1,47 @@
 //Q.06>>Calculate the roots of the quadratic equation with proper checking of the form
 //		ax^2+bx+c=0
-#include<stdio.h>
-#include<math.h>
-main()
+#include <stdio.h>
+#include <math.h>
+
+int main()
 {
-	float a,b,c,d,x1,x2;
-	printf("The Equation is ax^2+bx+c=0\n");
+    double a, b, c, determinant, root1,root2, realPart, imaginaryPart;
+
 	printf("Enter the value of a:");
-	scanf("%f",&a);
-	printf("Enter the value of b:");
-	scanf("%f",&b);
-	printf("Enter the value of c:");
-	scanf("%f",&c);
-	printf("Enter the value of x1:");
-	scanf("%f",x1);
-	printf("Enter the value of x2:");
-	scanf("%f",&x2);
-	d=sqrt(b*b-4*a*c);
-	if(d>=0)
-	{
-		x1=((-b+d)/2*a);
-		x2=((b-d)/2*a);
-		printf("The value of real root area %f %f",x2,a);
-	}
-	else
-		printf("No real root);
-}
+	scanf("%lf",&a);
+	printf("Enter coefficients b: ");
+	scanf("%lf",&b);
+	printf("Enter coefficients c: ");
+	scanf("%lf",&c);
+
+    determinant = b*b-4*a*c;
+
+    // condition for real and different roots
+    if (determinant > 0)
+    {
+		// sqrt() function returns square root
+		printf("Roots are REAL!\n");
+        root1 = (-b+sqrt(determinant))/(2*a);
+        root2 = (-b-sqrt(determinant))/(2*a);
+
+        printf("root1 = %.2lf and root2 = %.2lf",root1 , root2);
+    }
+
+    //condition for real and equal roots
+    else if (determinant == 0)
+    {
+        root1 = root2 = -b/(2*a);
+		printf("root1 = root2 = %.2lf;", root1);
+    }
+
+    // if roots are not real 
+    else
+    {
+		printf("Roots are Imaginary!");
+        realPart = -b/(2*a);
+        imaginaryPart = sqrt(-determinant)/(2*a);
+        printf("root1 = %.2lf+%.2lfi and root2 = %.2f-%.2fi", realPart, imaginaryPart, realPart, imaginaryPart);
+    }
+
+    return 0;
+}   

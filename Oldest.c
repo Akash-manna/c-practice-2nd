@@ -14,7 +14,7 @@ main()
 	else if((y>x)&&(y>z))
 		printf("Mr.Y is oldest");
 	else if((z>x)&&(z>y))
-		printf("Mr.Z is oldest");
+		printf("Mr.Z is oldest",);
 	else
 		printf("All three are of Same age");
 }

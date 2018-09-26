@@ -1,6 +1,6 @@
 //Q.29>Write a program to sort n numbers of data in ascending order
 #include<stdio.h>
-main()
+void main()
 {
 	int n,i,j,temp;
 	printf("Enter the Number of Elements:");

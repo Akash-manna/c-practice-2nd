@@ -1,6 +1,6 @@
 //Q09>>Make the sum of given digit
 #include<stdio.h>
-main()
+int main()
 {
 	int r,n,sum=0;
 	printf("Enter the value of Digit:");
@@ -12,4 +12,5 @@ main()
 		sum=sum+r;
 	}
 	printf("The Sum of the Digit is %d",sum);
+	return 0;
 }

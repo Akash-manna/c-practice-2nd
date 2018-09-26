@@ -2,37 +2,43 @@
 	Display the Highest Scorer among the Students.
 */
 #include<stdio.h>
-struct std
+struct student
 {
-	int roll;
-	int marks;
-	char name[50];
-};
-struct std s[100];
-main()
+     int roll;
+     char sname[20];
+     int marks;
+}stu[10];
+int main()
 {
-	int i,t,n;
-	printf("Enter the Number of Students:");
-	scanf("%d",&n);
-	for(i=0;i<n;i++)
-	{
-		printf("Enter the Name of the Student%d:",i+1);
-		scanf("%s",s[i].name);
-		printf("Enter the Roll No of the Student%d:",i+1);
-		scanf("%d",&s[i].roll);
-		printf("Enter the Marks of the Student%d:",i+1);
-		scanf("%d",&s[i].marks);
-	}
-	for(i=0;i<n;i++)
-		printf("\nstudent%d= %s\troll no= %d\tmarks= %d",(i+1),s[i].name,s[i].roll,s[i].marks);
-	int max=s[100].marks;
-	for(i=1;i<n;i++)
-	{
-		if(max<s[i].marks)
-		{
-			max=s[i].marks;
-			t=i;
-		}
-	}
-	printf("\nHighest Scorer: Name= %s,Roll =%d,Marks=%d",s[t].name,s[t].roll,s[t].marks);
+     int i,high,n;
+     printf("How many Student info you want to accept : ");
+     scanf("%d",&n);
+     printf("-----------------------------\n");
+     printf("Enter details for %d  students:",n);
+     printf("\n-----------------------------\n");
+     for(i=0;i<n;i++)
+     {
+          printf("Student Roll Number: ");
+          scanf("%d",&stu[i].roll);
+          printf("Name               : ");
+          scanf("%s",stu[i].sname);
+          printf("Marks              : ");
+          scanf("\n %d",&stu[i].marks);
+          printf("-----------------------------\n");
+     }
+     high=stu[0].marks;
+     for(i=0;i<n;i++)
+     {
+          if(stu[i].marks>high)
+          high=stu[i].marks;
+     }
+     printf("Highest scored student details:");
+     printf("\n-----------------------------\n");
+     printf("ROLLNO    NAME  MARKS\n");
+     for(i=0;i<n;i++)
+     {
+          if(stu[i].marks==high)
+          printf("\n %d\t %s\t%d",stu[i].roll,stu[i].sname,stu[i].marks);
+     }
+     return 0;
 }

@@ -10,7 +10,12 @@ main()
 	for(i=0;i<n;i++)
 	{
 		printf("A[%d] is ",(i+1));
-		scanf("%d",a[i]);
+		scanf("%d",&a[i]);
+	}
+	printf("The Array with the duplicate elements is:\n");
+	for(i=0;i<n;i++)
+	{
+		printf("%d\n",a[i]);
 	}
 	for(i=0;i<n;i++)
 	{
@@ -26,6 +31,7 @@ main()
 		for(r=p;r<n;r++)
 			a[r]=a[r+1];
 	}
+	printf("The Array after deleting the duplicate elements is:\n");
 	for(i=0;i<n;i++)
-		("%d",a[i]);
+		printf("%d\n",a[i]);
 }

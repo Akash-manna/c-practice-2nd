@@ -19,7 +19,7 @@ main()
 		printf("\nUppercase is: %c",b-32);
 	}
 	else if(b>=48&&b<=57)
-		printf("Number");
+		printf("%c is a Number!",a);
 	else
-		printf("Special Character!");
+		printf("%c is a Special Character!",a);
 }

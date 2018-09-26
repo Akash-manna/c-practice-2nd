@@ -18,6 +18,7 @@ main()
 	printf("Enter the marks of Mathematics:");
 	scanf("%f",&m);
 	avg=(p+c+m)/3;
+	printf("Your Average is %.2f\n",avg);
 	if(avg>=90&&avg<=100)
 		printf("You are Outstanding!");
 	else if(avg>=80&&avg<90)

@@ -1,4 +1,4 @@
-//Write a Program to merge a file
+//Q.40>Write a Program to merge a file
 #include<stdio.h>
 #include<stdlib.h>
 main(int argc,char *argv[])

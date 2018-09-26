@@ -4,7 +4,7 @@
 */
 #include<stdio.h>
 #include<string.h>
-main()
+void main()
 {
 	char A[100];
 	int i=0,j,k;

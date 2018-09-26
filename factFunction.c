@@ -11,5 +11,6 @@ int fact()
 }
 main()
 {
+	//Calling the fact() method from the main() method.
 	fact();
 }

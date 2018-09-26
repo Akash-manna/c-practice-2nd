@@ -2,7 +2,7 @@
 		1+(3/2!)+(5/3!)+...+n
 */
 #include<stdio.h>
-main()
+void main()
 {
 	int fact,n,i,sum=0,j;
 	printf("The Equation is like-\n1+(3/2!)+(5/3!)+...+N \n");

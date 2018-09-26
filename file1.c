@@ -1,11 +1,15 @@
 //Q.38>Write a Program to count the number of characters,space,tab,\n from an existing file
 #include<stdio.h>
-main()
+void main()
 {
 	FILE *fp;
 	char ch;
+	char filename[100];
+	printf("Enter the filename:\n");
+	gets(filename);
 	int nt=0,ni=0,ns=0,nc=0;
-	fp=fopen("file.c","r");
+	//fp=fopen("test1.txt","r");
+	fp=fopen(filename,"r");
 	if(fp==NULL)
 	{
 		printf("\n File Does not exist");

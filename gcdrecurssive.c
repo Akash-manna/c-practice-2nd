@@ -7,7 +7,7 @@ int gcd(int m,int n)
 	else
 		return(gcd(n,m%n));
 }
-main()
+void main()
 {
 	int m,n,x;
 	printf("Enter the value of M:");

@@ -1,25 +1,46 @@
 //Q.39>Write a Program to copy the Context of one file to another
-#include<stdio.h>
-main()
+
+#include <stdio.h>
+#include <stdlib.h> // For exit()
+ 
+int main()
 {
-	FILE *fp,*fs,*ft;
-	char ch;
-	fp=fopen("ref1.c","r");
-	ft=fopen("ref2.c","w");
-	if(fp==NULL||ft==NULL)
-	{
-		printf("\nFile Does Not Exist");
-	}
-	else
-	{
-		while(1)
-		{
-			ch=fgetc(fs);
-			if(ch==EOF)
-				break;
-			fputc(ch,ft);
-		}
-	}
-	fclose(ft);
-	fclose(fp);
+    FILE *fptr1, *fptr2;
+    char filename[100], c;
+ 
+    printf("Enter the filename to open for reading default: test1.txt\n");
+    scanf("%s", filename);
+ 
+    // Open one file for reading
+    fptr1 = fopen(filename, "r");
+    if (fptr1 == NULL)
+    {
+        printf("Cannot open file %s \n", filename);
+        exit(0);
+    }
+ 
+    printf("Enter the filename to open for writing default: test2.txt\n");
+    scanf("%s", filename);
+ 
+    // Open another file for writing
+    fptr2 = fopen(filename, "w");
+    if (fptr2 == NULL)
+    {
+        printf("Cannot open file %s \n", filename);
+        exit(0);
+    }
+ 
+    // Read contents from file
+    c = fgetc(fptr1);
+    while (c != EOF)
+    {
+        fputc(c, fptr2);
+        c = fgetc(fptr1);
+    }
+ 
+    printf("\nContents copied to %s", filename);
+ 
+    fclose(fptr1);
+    fclose(fptr2);
+    return 0;
 }
